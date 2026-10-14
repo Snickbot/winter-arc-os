@@ -3,35 +3,18 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f5efe3">
   <title>Winter Arc OS</title>
-  <style>
-    body {
-      margin: 0;
-      min-height: 100vh;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      background: #f5efe3;
-      color: #2b2b2b;
-      font-family: system-ui, sans-serif;
-      text-align: center;
-      padding: 24px;
-    }
-    h1 { color: #c2552d; margin: 0 0 8px; }
-    p { margin: 6px 0; }
-  </style>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <main>
-    <h1>Winter Arc OS</h1>
-    <p>Setup test: this page is live.</p>
-    <p id="time">Loading time...</p>
-  </main>
-  <script>
-    // Shows the current time in Bangladesh to prove JavaScript works.
-    const el = document.getElementById("time");
-    el.textContent = "Bangladesh time: " +
-      new Date().toLocaleString("en-GB", { timeZone: "Asia/Dhaka" });
-  </script>
+  <div id="app"><noscript>Winter Arc OS needs JavaScript turned on.</noscript></div>
+  <nav class="tabs" aria-label="Main">
+    <button data-tab="today">Today</button>
+    <button data-tab="roadmap">Roadmap</button>
+  </nav>
+  <div id="toast" role="status" aria-live="polite"></div>
+  <script src="data.js"></script>
+  <script src="app.js"></script>
 </body>
 </html>
